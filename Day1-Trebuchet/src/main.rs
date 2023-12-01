@@ -21,15 +21,15 @@ fn main() {
 
 fn replaceWithNumbers(contents: String) -> String {
     contents
-        .replace("one", "one1one")
-        .replace("two", "two2two")
-        .replace("three", "three3three")
-        .replace("four", "four4four")
-        .replace("five", "five5five")
-        .replace("six", "six6six")
-        .replace("seven", "seven7seven")
-        .replace("eight", "eight8eight")
-        .replace("nine", "nine9nine")
+        .replace("one", "o1e")
+        .replace("two", "t2o")
+        .replace("three", "t3e")
+        .replace("four", "4")
+        .replace("five", "5e")
+        .replace("six", "6")
+        .replace("seven", "7n")
+        .replace("eight", "e8t")
+        .replace("nine", "n9e")
 }
 
 fn combineNumbers(firstNumber: &Vec<String>, lastNumber: &Vec<String>) -> i32 {
