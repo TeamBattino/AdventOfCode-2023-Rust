@@ -1,24 +1,22 @@
 use std::fs;
 
 fn main() {
-    while true {
-        use std::time::Instant;
-        let now = Instant::now();
+    use std::time::Instant;
+    let now = Instant::now();
 
-        let file_path = "input.txt";
-        println!("In file {}", file_path);
+    let file_path = "input.txt";
+    println!("In file {}", file_path);
 
-        let contents: String =
-            fs::read_to_string(file_path).expect("Should have been able to read the file");
-        //let contents = replaceWithNumbers(contents);
-        let listLines: Vec<String> = contents.split("\n").map(|x| x.to_string()).collect();
+    let contents: String =
+        fs::read_to_string(file_path).expect("Should have been able to read the file");
+    //let contents = replaceWithNumbers(contents);
+    let listLines: Vec<String> = contents.split("\n").map(|x| x.to_string()).collect();
 
-        let total = combineNumbers(&firstNumber(&listLines), &lastNumber(&listLines));
-        println!("{}", total);
+    let total = combineNumbers(&firstNumber(&listLines), &lastNumber(&listLines));
+    println!("{}", total);
 
-        let elapsed = now.elapsed();
-        println!("Elapsed: {:.2?}", elapsed);
-    }
+    let elapsed = now.elapsed();
+    println!("Elapsed: {:.2?}", elapsed);
 }
 
 fn replaceWithNumbers(contents: String) -> String {
